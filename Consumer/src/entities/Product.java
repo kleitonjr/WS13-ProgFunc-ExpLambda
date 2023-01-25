@@ -26,17 +26,17 @@ public class Product{
 	}
 	
 	//2ª - Reference method com método estático
-	public static boolean staticProdPric(Product p) {
-		return p.getPrice() >= 100.0;
+	public static void staticPriUp(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
 	}
 	//3ª - Reference method com método não estático
-	public boolean nonstaticProdPric() {
-		return price >= 100.0;
+	public void nonstaticPriUp() {
+		price = price * 1.1;
 	}
 	
 	@Override
 	public String toString() {
-		return "Product [name= " + name + ", price= " + String.format("%.2f", price) + "]";
+		return name + ", price = R$" + String.format("%.2f", price);
 	}
 
 }

@@ -16,22 +16,23 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		list.add(new Product("Mouse", 75.87));
+		
+//		1ª - Implementação da interface
+//		list.forEach(new PriceUpdate());
 
 //		2ª e 3ª - Reference method com método estático e não estático
-//		list.removeIf(Product :: staticProdPric);
-//		list.removeIf(Product :: nonstaticProdPric);
-
-//		4ª - Expressão lambda declarada
-		double min = 100.0;
-//		Predicate<Product> pred = p -> p.getPrice() >= min;
-//		list.removeIf(pred);
-
-//		5ª - Expressão lambda inline		
-		list.removeIf(p -> p.getPrice() >= min);
+//		list.forEach(Product::staticPriUp);
+//		list.forEach(Product::nonstaticPriUp);
 		
-		for(Product p : list) {
-			System.out.println(p);	
-		}
+//		4ª - Expressão lambda declarada
+		double factor = 1.1;
+//		Consumer<Product> cons = p -> p.setPrice(p.getPrice() * factor);
+//		list.forEach(cons);
+		
+//		5ª - Expressão lambda inline
+		list.forEach( p -> p.setPrice(p.getPrice() * factor));
+		
+		list.forEach(System.out::println);
 		
 	}
 
