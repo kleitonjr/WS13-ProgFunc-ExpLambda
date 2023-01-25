@@ -25,12 +25,12 @@ public class Product{
 		this.price = price;
 	}
 	
-	//2ª - Reference method com método estático
+	//2Âª - Reference method com metodo estatico
 	public static boolean staticProdPric(Product p) {
 		return p.getPrice() >= 100.0;
 	}
-	//3ª - Reference method com método não estático
-	public boolean nonstaticProdPric() {
+	//3Âª - Reference method com metodo nao estatico
+	public boolean nonStaticProdPric() {
 		return price >= 100.0;
 	}
 	

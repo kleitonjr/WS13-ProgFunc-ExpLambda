@@ -25,12 +25,12 @@ public class Product{
 		this.price = price;
 	}
 	
-	//2ª - Reference method com método estático
+	//2Âª - Reference method com metodo estatico
 	public static void staticPriUp(Product p) {
 		p.setPrice(p.getPrice() * 1.1);
 	}
-	//3ª - Reference method com método não estático
-	public void nonstaticPriUp() {
+	//3Âª - Reference method com metodo nao estatico
+	public void nonStaticPriUp() {
 		price = price * 1.1;
 	}
 	

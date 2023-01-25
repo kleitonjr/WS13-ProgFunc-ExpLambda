@@ -22,8 +22,15 @@ public class Product {
 		this.price = price;
 	}
 	
-	
-	
+	//2ª - Reference method com metodo estatico
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+	}
+	//3ª - Reference method com metodo nao estatico
+	public String nonStaticUpperCaseName() {
+		return name.toUpperCase();
+	}
+		
 	@Override
 	public String toString() {
 		return name + ", price = R$" + String.format("%.2f", price);

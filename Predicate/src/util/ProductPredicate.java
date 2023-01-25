@@ -6,7 +6,7 @@ import entities.Product;
 
 public class ProductPredicate implements Predicate<Product>{
 
-	//1ª - Implementação da interface
+	//1Âª - IMPLEMENTAÃ‡ÃƒO DA INTERFACE
 	@Override
 	public boolean test(Product p) {
 		return p.getPrice() >= 100.0;

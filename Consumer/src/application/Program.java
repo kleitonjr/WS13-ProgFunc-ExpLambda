@@ -11,25 +11,29 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		List<Product> list = new ArrayList<>();
 
+		//IMPRIME NA TELA O PREÃ‡O DOS ITENS COM UM ACRESCIMO DE 10%
+		
 		list.add(new Product("Tv", 900.00));
 		list.add(new Product("Mouse", 50.00));
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
-		list.add(new Product("Mouse", 75.87));
+		list.add(new Product("Mousepad", 75.87));
 		
-//		1ª - Implementação da interface
-//		list.forEach(new PriceUpdate());
+		//1Âª - IMPLEMENTAÃ‡ÃƒO DA INTERFACE
+		//list.forEach(new PriceUpdate());
 
-//		2ª e 3ª - Reference method com método estático e não estático
-//		list.forEach(Product::staticPriUp);
-//		list.forEach(Product::nonstaticPriUp);
+		//2Âª - Reference method com metodo estatico
+		//list.forEach(Product::staticPriUp);
 		
-//		4ª - Expressão lambda declarada
+		//3Âª - Reference method com metodo nao estatico
+		//list.forEach(Product::nonstaticPriUp);
+		
+		//4Âª - Expressao lambda declarada
 		double factor = 1.1;
-//		Consumer<Product> cons = p -> p.setPrice(p.getPrice() * factor);
-//		list.forEach(cons);
+		//Consumer<Product> cons = p -> p.setPrice(p.getPrice() * factor);
+		//list.forEach(cons);
 		
-//		5ª - Expressão lambda inline
+		//5Âª - Expressao lambda inline
 		list.forEach( p -> p.setPrice(p.getPrice() * factor));
 		
 		list.forEach(System.out::println);
